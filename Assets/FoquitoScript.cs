@@ -6,6 +6,12 @@ public class FoquitoScript : MonoBehaviour
 {
     public GameObject[] colors;
     public int currentLightIndex =-1;
+    int A = 0;
+    int B = 0;
+    int N = 0;
+    int R = 0;
+    int V = 0;
+    int VidaUtil = 3;
 
     void Start()
     {
@@ -29,6 +35,46 @@ public class FoquitoScript : MonoBehaviour
 
         DeactivateAllLights(); // Desactiva todas las luces
         colors[currentLightIndex].SetActive(true); //Activa el nuevo indice
+        if (currentLightIndex == 0)
+        {
+            A++;
+            if (A > VidaUtil)
+            {
+                colors[currentLightIndex].SetActive(false);
+            }
+        }
+        if (currentLightIndex == 1)
+        {
+            B++;
+            if (B > VidaUtil)
+            {
+                colors[currentLightIndex].SetActive(false);
+            }
+        }
+        if (currentLightIndex == 2)
+        {
+            N++;
+            if (N > VidaUtil)
+            {
+                colors[currentLightIndex].SetActive(false);
+            }
+        }
+        if (currentLightIndex == 3)
+        {
+            R++;
+            if (R > VidaUtil)
+            {
+                colors[currentLightIndex].SetActive(false);
+            }
+        }
+        if (currentLightIndex == 4)
+        {
+            V++;
+            if (V > VidaUtil)
+            {
+                colors[currentLightIndex].SetActive(false);
+            }
+        }
     }
 
     public void ActivatePreviousLight() // Lo mismo que ActiveNextLight() pero para antras
